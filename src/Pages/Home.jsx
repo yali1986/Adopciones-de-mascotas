@@ -1,9 +1,9 @@
-import React from 'react'
+import CatCards from '../components/CatCards'
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <CatCards />
     </div>
   )
 }
