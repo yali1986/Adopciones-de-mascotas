@@ -20,7 +20,7 @@ export default function Footer() {
             <h5 className="fs-6">Email: veuanimal@veuanimal.org</h5>
 
             <a href="https://www.veuanimal.org/es/veu-animal/" target="_blank" rel="noopener noreferrer">
-              <button className="fs-6 btn btn-outline-dark mb-2">Más sobre Veu Animal </button>
+              <h4 className="fs-6 my-3" >Más sobre Veu Animal </h4>
             </a>
 
 
