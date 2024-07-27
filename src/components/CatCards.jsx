@@ -19,7 +19,7 @@ const CatCards = () => {
             <img className='card-img-top' src={cat.image} alt={cat.name} style={{ maxHeight: "180px", maxWidth: "250px" }} />
             <h2 className='card-title mt-3'>{cat.name}</h2>
             <p className='card-text'>Age: {cat.age}</p>
-            <p className='card-text'>{cat.story}</p>
+            <p className='card-text'>{cat.story}</p>          
             <button className='btn btn-warning' onClick={() => handleMoreInfoClick(cat)}>More info</button>
           </div>
         </div>

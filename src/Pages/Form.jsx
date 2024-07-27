@@ -37,11 +37,12 @@ const Form = () => {
               <option value="" disabled selected>Seleccione</option>
               <option value="1">Adopción</option>
               <option value="2">Casa de acogida</option>
-              <option value="3">Necesito que me contacten</option>
+              <option value="3">Quiero ser socio</option>
+              <option value="4">Necesito que me contacten</option>
             </select>
 
-            <p className='mt-3 mb-1 row'>Nombre del animal</p>
-            <select className="form-select form-select-sm row w-50" value={selectedCatId} onChange={handleSelectChange} required>
+            <p className='mt-3 mb-1 row'>Nombre del animal (opcional)</p>
+            <select className="form-select form-select-sm row w-50" value={selectedCatId} onChange={handleSelectChange}>
               <option value="" disabled>Selecciona el nombre del animal</option>
               {cats.map(cat => (
                 <option key={cat.id} value={cat.id}>{cat.name}</option>

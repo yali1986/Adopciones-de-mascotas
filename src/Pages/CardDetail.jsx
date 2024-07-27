@@ -22,6 +22,7 @@ const CardDetail = () => {
                 <div className='card-body'>
                     <p>Age: {selectedCat.age}</p>
                     <p>{selectedCat.story}</p>
+                    <p>Characteristics: {selectedCat.characteristics}</p>
 
 
 

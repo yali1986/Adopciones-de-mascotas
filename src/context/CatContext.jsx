@@ -15,42 +15,48 @@ const CatProvider = ({ children }) => {
       name: "Whisko",
       age: "24 months",
       story: "Rescued from the streets",
-      image: img1
+      image: img1,
+      characteristics: "playful, energetic"
     },
     {
       id: 2,
       name: "Mitta",
       age: "11 months",
       story: "Found in a park",
-      image: img2
+      image: img2,
+      characteristics: "funny, observer"
     },
     {
       id: 3,
       name: "Bruno",
-      age: "16 months",
-      story: "Rescued from the streets",
-      image: img3
+      age: "6 months",
+      story: "Rescued from a building",
+      image: img3,
+      characteristics: "sleepyhead, tender"
     },
     {
       id: 4,
       name: "Anís",
       age: "15 months",
       story: "Found in a park",
-      image: img4
+      image: img4,
+      characteristics: "quiet, affectionate"
     },
     {
       id: 5,
       name: "The Babies",
       age: "3 months",
       story: "Rescued from the streets",
-      image: img5
+      image: img5,
+      characteristics: "funny, curious"
     },
     {
       id: 6,
       name: "Neo",
       age: "24 months",
-      story: "Found in a park",
-      image: img6
+      story: "Found in a forest",
+      image: img6, 
+      characteristics: "quiet, sleepyhead"
     }
   ]);
 
