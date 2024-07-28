@@ -16,7 +16,11 @@ const CatProvider = ({ children }) => {
       age: "24 months",
       story: "Rescued from the streets",
       image: img1,
-      characteristics: "playful, energetic"
+      characteristics: "playful, energetic",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "esterilizado"
     },
     {
       id: 2,
@@ -24,7 +28,11 @@ const CatProvider = ({ children }) => {
       age: "11 months",
       story: "Found in a park",
       image: img2,
-      characteristics: "funny, observer"
+      characteristics: "funny, observer",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "esterilizado"
     },
     {
       id: 3,
@@ -32,7 +40,11 @@ const CatProvider = ({ children }) => {
       age: "6 months",
       story: "Rescued from a building",
       image: img3,
-      characteristics: "sleepyhead, tender"
+      characteristics: "sleepyhead, tender",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "con compromiso de esterilización"
     },
     {
       id: 4,
@@ -40,7 +52,11 @@ const CatProvider = ({ children }) => {
       age: "15 months",
       story: "Found in a park",
       image: img4,
-      characteristics: "quiet, affectionate"
+      characteristics: "quiet, affectionate",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "esterilizado"
     },
     {
       id: 5,
@@ -48,7 +64,11 @@ const CatProvider = ({ children }) => {
       age: "3 months",
       story: "Rescued from the streets",
       image: img5,
-      characteristics: "funny, curious"
+      characteristics: "funny, curious",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "con compromiso de esterilización"
     },
     {
       id: 6,
@@ -56,7 +76,11 @@ const CatProvider = ({ children }) => {
       age: "24 months",
       story: "Found in a forest",
       image: img6, 
-      characteristics: "quiet, sleepyhead"
+      characteristics: "quiet, sleepyhead",
+      microship: "sí",
+      vaccines: "no",
+      dewormed: "sí",
+      sterilized: "esterilizado"
     }
   ]);
 
@@ -74,5 +98,3 @@ const CatProvider = ({ children }) => {
 };
 
 export { CatContext, CatProvider };
-
-

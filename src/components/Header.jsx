@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom"
 export default function Header() {
     const location = useLocation()
     const isHome = location.pathname === '/'
+    const isForm = location.pathname === '/form'
 
     return (
         <>
@@ -31,31 +32,39 @@ export default function Header() {
                             <h6 style={{ color: "black" }}>desde 1€ al mes</h6>
                         </a>
                     </div>
-
-
                 </div>
+
+
+
                 <div className="row bg-black pt-1">
-
                     <div className="col-3 my-auto text-white text-center" >
-                        <Link to="/form" style={{ textDecoration: 'underline', textDecorationColor: 'white' }}>
-                            <h6 style={{ color: "white" }}>Hazte socio</h6>
-
-                        </Link>
+                        {isForm ? (
+                            ""
+                        ) : (
+                            <Link to="/form?type=partner" style={{ textDecoration: 'underline', textDecorationColor: 'white' }}>
+                                <h6 style={{ color: "white" }}>¿Quiéres ser socio?</h6>
+                            </Link>
+                        )}
                     </div>
 
+
                     <div className="col-6 text-white my-auto text-center">
-
-                        <Link to="/form" style={{ textDecoration: 'underline', textDecorationColor: 'white' }}>
-                            <h6 style={{ color: "white" }}>Contacta</h6>
-                        </Link>
-
+                        {isForm ? (
+                            ""
+                        ) : (
+                            <Link to="/form?type=contact" style={{ textDecoration: 'underline', textDecorationColor: 'white' }}>
+                                <h6 style={{ color: "white" }}>Contacta</h6>
+                            </Link>
+                        )}
 
                     </div>
 
                     <div className="col-3 my-auto text-white text-center">
                         <h6>Idiomas</h6>
+
                     </div>
                 </div>
+
             </div>
         </>
 
