@@ -7,11 +7,15 @@ import Footer from './components/Footer';
 import Form from './Pages/Form';
 import CardDetail from './Pages/CardDetail';
 import { CatProvider } from './context/CatContext';
+import { Suspense } from 'react';
+
 
 function App() {
+
+
   return (
-    <BrowserRouter>
-      <CatProvider>
+    <BrowserRouter>     
+      <CatProvider>      
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,6 +28,13 @@ function App() {
   );
 }
 
-export default App;
+export default function WrappedApp() {
+  return (
+ 
+    <Suspense fallback="...loading">
+      <App />
+    </Suspense>
+  )
+}
 
 

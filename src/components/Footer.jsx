@@ -19,8 +19,8 @@ export default function Footer() {
             <h5 className="fs-6">Ap. correos 125, 08921 Sta Coloma de Gramanet - Barcelona</h5>
             <h5 className="fs-6">Email: veuanimal@veuanimal.org</h5>
 
-            <a href="https://www.veuanimal.org/es/veu-animal/" target="_blank" rel="noopener noreferrer">
-              <h4 className="fs-6 my-3" >Más sobre Veu Animal </h4>
+            <a style={{textDecoration: 'none'}} href="https://www.veuanimal.org/es/veu-animal/" target="_blank" rel="noopener noreferrer">
+              <h4 className="fs-6 my-3">Más sobre Veu Animal </h4>
             </a>
 
 

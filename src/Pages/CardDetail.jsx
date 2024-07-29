@@ -12,25 +12,26 @@ const CardDetail = () => {
 
     return (
         <div className='container-fluid'>
-        <div className='row'></div>
+            <div className='row'></div>
             <div className='card w-75 mx-auto m-4 shadow p-3' style={{ border: "none" }}>
-            <h2 className='mx-auto ms-xl-3'>{selectedCat.name}</h2>
-            <div className='d-flex w-75'>
-          
-            <img src={selectedCat.image} alt={selectedCat.name} style={{ maxHeight: "400px", maxWidth: "400px" }} />
-            <div className='card-text mx-auto mt-3 '>
-            <h4 className='mb-3'> Ficha veterinaria</h4>          
-            <p>Microship: {selectedCat.microship}</p>
-            <p>Vacunas: {selectedCat.vaccines}</p>
-            <p>Desparasitación: {selectedCat.dewormed}</p>
-            <p>Estado de fertilidad: {selectedCat.sterilized}</p>
-            </div>
-            </div>
-                
-           
+                <h2 className='mx-auto ms-xl-3'>{selectedCat.name}</h2>
+                <div className='d-flex w-75'>
+
+
+  <img src={selectedCat.image} alt={selectedCat.name} style={{ maxHeight: "400px", maxWidth: "400px" }} />                 
+                    <div className='card-text mx-auto mt-3 '>
+                        <h4 className='mb-3'> Ficha veterinaria</h4>
+                        <p>Microship: {selectedCat.microship}</p>
+                        <p>Vacunas: {selectedCat.vaccines}</p>
+                        <p>Desparasitación: {selectedCat.dewormed}</p>
+                        <p>Castrado: {selectedCat.sterilized}</p>
+                    </div>
+                </div>
+
+
 
                 <div className='card-body'>
-                    <p>Age: {selectedCat.age}</p>
+                    <p>Age aprox.: {selectedCat.age}</p>
                     <p>{selectedCat.story}</p>
                     <p>Characteristics: {selectedCat.characteristics}</p>
 

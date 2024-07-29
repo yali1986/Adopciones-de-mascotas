@@ -16,7 +16,9 @@ const Form = () => {
       setSelectedOption("3")
     } else if (type === 'contact') {
       setSelectedOption("0")
-    }
+    } else if (type === 'voluntier') {
+      setSelectedOption("5")
+    } 
   }, [location])
 
   useEffect(() => {
@@ -46,11 +48,12 @@ const Form = () => {
               <input className='row mb-3' type="number" placeholder='Teléfono' id="tlf" required />
 
               <select className="form-select form-select-sm row w-50 mb-3" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} required>
-                <option value="0" disabled>Seleccione</option>
+                <option value="0">Seleccione</option>
                 <option value="1">Adopción</option>
                 <option value="2">Casa de acogida</option>
                 <option value="3">Quiero ser socio</option>
                 <option value="4">Necesito que me contacten</option>
+                <option value="5">Quiero ser voluntario</option>
               </select>
 
               <p className='mt-3 mb-1 row'>Nombre del animal (opcional)</p>
