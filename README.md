@@ -92,7 +92,7 @@ Navegación
 La navegación principal se realiza a través del Header, que incluye enlaces a las diferentes secciones de la aplicación.
 La página de detalles del gato (CardDetail) muestra información específica de cada gato y permite a los usuarios interesados obtener más detalles.
 Notas Adicionales
-Internacionalización: La aplicación utiliza react-i18next para la internacionalización.
+Internacionalización: La aplicación utiliza react-i18next para la internacionalización. Se usan tres lenguajes: catalán, español e inglés.
 Diseño Responsivo: La aplicación está diseñada para ser responsiva utilizando Bootstrap.
 
 

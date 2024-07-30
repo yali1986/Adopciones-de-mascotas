@@ -2,8 +2,10 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CatContext } from '../context/CatContext'
 import "./catCards.css"
+import { useTranslation } from "react-i18next"
 
 const CatCards = () => {
+  const { t } = useTranslation("translation")
   const { cats, selectCat } = useContext(CatContext);
   const navigate = useNavigate();
 
@@ -23,7 +25,7 @@ const CatCards = () => {
             <h2 className='card-title mt-3'>{cat.name}</h2>
             <p className='card-text'>Age: {cat.age}</p>
             <p className='card-text'>{cat.story}</p>          
-            <button className='btn btn-warning' onClick={() => handleMoreInfoClick(cat)}>More info</button>
+            <button className='btn btn-warning' onClick={() => handleMoreInfoClick(cat)}>{t("main.moreinfo")}</button>
           </div>
         </div>
       ))}

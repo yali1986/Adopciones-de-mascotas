@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CatContext } from '../context/CatContext';
-import '../components/cardDetail.css'
+import '../components/cardDetail.css';
+import { useTranslation } from "react-i18next";
 
 const CardDetail = () => {
-    const { selectedCat, selectCat } = useContext(CatContext);
-    const navigate = useNavigate();
+    const { selectedCat, selectCat } = useContext(CatContext)
+    const navigate = useNavigate()
+    const { t } = useTranslation("translation")
 
     const handleFormNavigation = () => {
         navigate('/form')
@@ -25,10 +27,10 @@ const CardDetail = () => {
 
 
                         <div className='card-text ms-5 mt-3 '>
-                            <h4 className='my-2'> Ficha veterinaria</h4>
+                            <h4 className='my-2'>{t("main.vetinfo")}</h4>
                             <p>Microship: {selectedCat.microship}</p>
-                            <p>Vacunas: {selectedCat.vaccines}</p>
-                            <p>Desparasitación: {selectedCat.dewormed}</p>
+                            <p>{t("main.vaccines")}: {selectedCat.vaccines}</p>
+                            <p>{t("main.deworming")}: {selectedCat.dewormed}</p>
                             <p>Castrado: {selectedCat.sterilized}</p>
                         </div>
                     </div>
@@ -36,9 +38,9 @@ const CardDetail = () => {
 
 
                     <div className='card-body' style={{ maxHeight: "400px", maxWidth: "700px" }}>
-                        <p>Age aprox.: {selectedCat.age}</p>
-                        <p>{selectedCat.story}</p>
-                        <p>Characteristics: {selectedCat.characteristics}</p>
+                        <p>{t("main.age")}: {selectedCat.age}</p>
+                        <p>{selectedCat.story}</p>   
+                        <p>{t("main.characteristics")}: {selectedCat.characteristics}</p>
 
 
 
@@ -54,7 +56,7 @@ const CardDetail = () => {
                                 </div>
                                 <div className='row'>
                                     <button className='btn btn-warning col-6 col-md-4 mx-auto my-2' onClick={handleFormNavigation}>
-                                        Rellena el Formulario
+                                    {t("main.ompleform")}
                                     </button>
                                 </div>
                             </div>
@@ -64,7 +66,7 @@ const CardDetail = () => {
                             <div className='col text-center'>
                                 <Link to="/">
                                     <button className='btn btn-outline-warning my-2'>
-                                        Volver al listado
+                                    {t("main.backlist")}
                                     </button>
                                 </Link>
                             </div>

@@ -2,7 +2,21 @@
     "main": {
       "title": "Adopciones en Barcelona",
       "becomePartner": "¿Quieres ser socio?",
-      "Contact": "Contacta"
+      "contact": "Contacta",
+      "team": "Únete a nuestro equipo de voluntarios",
+       "teaming": "Hazte",
+       "teaming2": "TEAMING",
+       "teaming3": "desde 1€ al mes",
+       "moreinfo": "Más info",
+       "vetinfo": "Ficha Veterinaria",
+       "vaccines": "Vacunas",
+       "deworming": "Desparasitación",
+       "age": "Edad aprox.",
+       "characteristics": "Características",
+       "ompleform": "Rellena el Formulario",
+       "backlist": "Volver al listado",
+       "welcomevolunteer": "Bienvenido a la página de voluntarios de Veu Animal",
+       "thanks": "Gracias por formar parte de nuestro equipo!"
     }
   }
   

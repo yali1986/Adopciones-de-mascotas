@@ -1,11 +1,14 @@
 import construction from "../assets/construction.png"
+import { useTranslation } from "react-i18next";
 
 
 export default function Voluntariado() {
+    const { t } = useTranslation("translation")
+
     return (
         <div className='container-fluid text-center'>
-            <h4 className=' my-5'>Bienvenido a la página de voluntarios de Veu Animal</h4>
-            <h4 className='my-3'>Gracias por formar parte de nuestro equipo!</h4>
+            <h4 className=' my-5'>{t("main.welcomevolunteer")}</h4>
+            <h4 className='my-3'>{t("main.thanks")}</h4>
 
 
             <div className="text-center m-5 mx-auto p-5">

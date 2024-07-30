@@ -5,6 +5,8 @@ import logo from "../assets/LOGO.png";
 import './header.css'; 
 import appFirebase from '../credenciales';
 import { getAuth, signOut } from "firebase/auth";
+import Languages from "./Languages";
+
 
 export default function Header() {
   const location = useLocation()
@@ -39,7 +41,7 @@ export default function Header() {
               ""
             ) : (
               <Link to="/form?type=voluntier" style={{ textDecoration: 'none' }}>
-                <h6 className="text-black me-5 px-5 pt-2">Únete a nuestro equipo de voluntarios</h6>
+                <h6 className="text-black me-5 px-5 pt-2">{t("main.team")}</h6>
               </Link>
             )}
           </div>          
@@ -54,7 +56,7 @@ export default function Header() {
                 </button>
               ) : ( 
                 <button className="btn btn-outline-dark text-black me-5 px-5 text-white border-white mb-1" onClick={handleLogin} style={{ textDecoration: 'none' }}>
-                  Login TEAM
+                  MEMBER Login 
                 </button>
               ) 
             )}
@@ -76,40 +78,43 @@ export default function Header() {
             )}
           </div>
 
-          <div className="row p-3 w-50">
-            <div className="col-3 my-auto text-black text-center">
+          <div className="row px-3 w-50">
+            <div className="col-3 mt-5 text-black text-center">
               {isForm ? (
                 ""
               ) : (
                 <Link to="/form?type=partner" style={{ textDecoration: 'none' }}>
-                  <h6 style={{ color: "black" }}>¿Quiéres ser socio?</h6>
+                  <h6 style={{ color: "black" }}>{t("main.becomePartner")}</h6>
                 </Link>
               )}
             </div>
 
-            <div className="col-6 text-black my-auto text-center">
+            <div className="col-6 text-black mt-5 text-center">
               {isForm ? (
                 ""
               ) : (
                 <Link to="/form?type=contact" style={{ textDecoration: 'none' }}>
-                  <h6 style={{ color: "black" }}>Contacto</h6>
+                  <h6 style={{ color: "black" }}>{t("main.contact")}</h6>
                 </Link>
               )}
-            </div>
 
-            <div className="col-3 my-auto text-black text-center">
-              <h6>Idiomas</h6>
+           
             </div>
+          
+            <div className="col my-auto">
+              <h6><Languages /> </h6>
+            </div>
+            
           </div>
 
           <div className="col-3 mt-4 teaming-container">
             <div className="teaming-overlay"></div>
             <a href="https://www.teaming.net/veuanimal-santacolomadegramenet-bcn" target="_blank" rel="noopener noreferrer" className="teaming-text" style={{ textDecoration: 'none' }}>
-              <h4 className="fs-6">Hazte</h4>
-              <h5 className="fs-5 fw-bolder">TEAMING</h5>  
+              <h4 className="fs-6">{t("main.teaming")}</h4>
+              <h5 className="fs-5 fw-bolder">{t("main.teaming2")}</h5>  
               <div className="row text-end teaming-text">
         
-          <h6 className="fs-6 col text-center ">desde 1€ al mes</h6>
+          <h6 className="fs-6 col text-center ">{t("main.teaming3")}</h6>
           </div>          
             </a>
             
