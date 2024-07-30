@@ -15,9 +15,9 @@ const CardDetail = () => {
 
     return (
         <div className='container-fluid'>
-            <div className='col-10 mx-auto'>
+            <div className='col-10 mx-auto' >
 
-                <div className='card w-75 mx-auto m-4 shadow p-3' style={{ border: "none" }} >
+                <div className='card w-50 mx-auto m-4 shadow p-5' style={{ border: "none" }} >
                     <h2 className='mx-auto ms-xl-3' style={{cursor:"default"}}>{selectedCat.name}</h2>
                     <div className='d-flex w-75'>
 
