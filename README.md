@@ -8,13 +8,13 @@ Home: Página principal con información general.
 Login Voluntarios: Autenticación para usuarios del equipo de voluntarios.
 Formulario: Para socios, contacto, y voluntarios.
 Detalles del Gato: Información y foto sobre cada gato disponible para adopción.
-Voluntariado: Página exclusiva para voluntarios registrados.
+Voluntariado: Página exclusiva para voluntarios registrados donde se muestran las tareas donde se pueden apuntar, las actividades que hace cada uno y las que necesitan ser cubiertas, los eventos que se pueden apoyar.
 Logout: Cerrar sesión para usuarios voluntarios.
 Tecnologías Utilizadas
 React
 React Router
 Firebase para autenticación
-Bootstrap para diseño
+Bootstrap y CSS para diseño
 Configuración del Proyecto
 Pre-requisitos
 Node.js (v14 o superior)
