@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from '../context/AuthContext'
 import logo from "../assets/LOGO.png";
-import './header.css'; 
+import './header.css';
 import appFirebase from '../credenciales';
 import { getAuth, signOut } from "firebase/auth";
 import Languages from "./Languages";
@@ -19,18 +19,18 @@ export default function Header() {
 
   const handleLogout = () => {
     signOut(auth).then(() => {
-        navigate("/")
+      navigate("/")
     }).catch(error => {
-        console.error("Error de signing out: ", error)
+      console.error("Error de signing out: ", error)
     })
-    }
+  }
   const handleLogin = () => {
     signOut(auth).then(() => {
-        navigate("/login")
+      navigate("/login")
     }).catch(error => {
-        console.error("Error de signing out: ", error)
+      console.error("Error de signing out: ", error)
     })
-    }
+  }
 
   return (
     <>
@@ -44,21 +44,21 @@ export default function Header() {
                 <h6 className="text-black me-5 px-5 pt-2">{t("main.team")}</h6>
               </Link>
             )}
-          </div>          
+          </div>
 
           <div className="col-3 d-flex justify-content-end">
-          {isForm ? (
+            {isForm ? (
               ""
             ) : (
-                usuario ? (
+              usuario ? (
                 <button className="btn btn-link text-black me-5 px-5 bg-black text-white border-white mb-1" onClick={handleLogout} style={{ textDecoration: 'none' }}>
                   Logout
                 </button>
-              ) : ( 
+              ) : (
                 <button className="btn btn-outline-dark text-black me-5 px-5 text-white border-white mb-1" onClick={handleLogin} style={{ textDecoration: 'none' }}>
-                  MEMBER Login 
+                  MEMBER Login
                 </button>
-              ) 
+              )
             )}
           </div>
         </div>
@@ -67,13 +67,13 @@ export default function Header() {
           <div className="col-3">
             {isHome ? (
               <img style={{ maxHeight: "300px", maxWidth: "200px", border: "none" }}
-                   className="card p-3 img-fluid mx-auto my-2"
-                   src={logo}
-                   alt="Logo de Veu Animal, asociación protectora de animales"
+                className="card p-3 img-fluid mx-auto my-2"
+                src={logo}
+                alt="Logo de Veu Animal, asociación protectora de animales"
               />
             ) : (
               <Link to="./">
-                <img style={{ maxHeight: "300px", maxWidth: "200px",border: "none" }} className="card p-3 img-fluid mx-auto my-4" src={logo} />
+                <img style={{ maxHeight: "300px", maxWidth: "200px", border: "none" }} className="card p-3 img-fluid mx-auto my-4" src={logo} />
               </Link>
             )}
           </div>
@@ -98,34 +98,43 @@ export default function Header() {
                 </Link>
               )}
 
-           
+
             </div>
-          
+
             <div className="col my-auto">
               <h6><Languages /> </h6>
             </div>
-            
+
           </div>
 
           <div className="col-3 mt-4 teaming-container">
             <div className="teaming-overlay"></div>
             <a href="https://www.teaming.net/veuanimal-santacolomadegramenet-bcn" target="_blank" rel="noopener noreferrer" className="teaming-text" style={{ textDecoration: 'none' }}>
               <h4 className="fs-6">{t("main.teaming")}</h4>
-              <h5 className="fs-5 fw-bolder">{t("main.teaming2")}</h5>  
+              <h5 className="fs-5 fw-bolder">{t("main.teaming2")}</h5>
               <div className="row text-end teaming-text">
-        
-          <h6 className="fs-6 col text-center ">{t("main.teaming3")}</h6>
-          </div>          
+
+                <h6 className="fs-6 col text-center ">{t("main.teaming3")}</h6>
+              </div>
             </a>
-            
-          </div>          
-         
+
+          </div>
+
         </div>
 
-        <div className="row d-flex text-center justify-content-center">
-          <h1 className="col-6 fs-2 mt-3">{t("main.title")}</h1>
-        </div>
+        <div className="row d-flex text-center justify-content-center">   
+        <div className="col-6 fs-2 mt-3" style={{textDecoration:"none"}}>  
+          {isHome ? (
+            <h1>{t("main.title")}</h1>
+            ) : (
+              <Link to="./" style={{ textDecoration: 'none', color: 'black' }}>
+              <h1>{t("main.title")}</h1>
+              </Link>
+            )}
+       </div>
       </div>
-    </> 
-   )
+
+      </div>
+    </>
+  )
 }
