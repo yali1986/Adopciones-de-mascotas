@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <div className="container-fluid">
-        <div className='row p-3 bg-black mt-5'>
+        <div className='row p-3 bg-black mt-3'>
 
         </div>
         <div className="row text-center bg-light p-2">

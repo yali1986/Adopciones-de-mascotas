@@ -1,24 +1,25 @@
-
-{  
-    "main": {
-      "title": "Adoptions in Barcelona",
-      "becomePartner": "Do you want to be a partner",
-      "contact": "Contact",
-      "team": "Join our team of volunteers",
-       "teaming": "Become a",
-       "teaming2": "TEAMING",
-       "teaming3": "from €1 per month",
-       "moreinfo": "More info",
-       "vetinfo": "Veterinary Record",
-       "vaccines": "Vaccines",
-       "deworming": "Deworming",
-       "age": "Aprox age",
-       "characteristics": "Characteristics",
-       "ompleform": "Fill the form",
-       "backlist": "Back to list",
-       "welcomevolunteer": "Welcome to the Veu Animal volunteer page",
-       "thanks": "Thank you for being part of our team!"
-
-    }
+{
+  "main": {
+    "title": "Adoptions in Barcelona",
+    "becomePartner": "Do you want to be a partner",
+    "contact": "Contact",
+    "team": "Join our team of volunteers",
+    "teaming": "Become a",
+    "teaming2": "TEAMING",
+    "teaming3": "from €1 per month",
+    "moreinfo": "More info",
+    "vetinfo": "Veterinary Record",
+    "vaccines": "Vaccines",
+    "deworming": "Deworming",
+    "age": "Aprox age",
+    "characteristics": "Characteristics",
+    "ompleform": "Fill the form",
+    "backlist": "Back to list",
+    "welcomevolunteer": "Welcome to the Veu Animal volunteer page",
+    "thanks": "Thank you for being part of our team!",
+    "adopt_me": "Do you decide to adopt me?",
+    "adopt_us": "Do you decide to adopt us?",
+    "foster_me": "Or can you provide me with a foster home?",
+    "foster_us": "Or can you provide us with a foster home?"
   }
-  
+}

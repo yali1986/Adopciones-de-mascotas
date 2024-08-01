@@ -55,7 +55,7 @@ export default function Header() {
                   Logout
                 </button>
               ) : (
-                <button className="btn btn-outline-dark text-black me-5 px-5 text-white border-white mb-1" onClick={handleLogin} style={{ textDecoration: 'none' }}>
+                <button className="btn btn-outline-dark text-black text-white border-white mb-1" onClick={handleLogin} style={{ textDecoration: 'none' }}>
                   MEMBER Login
                 </button>
               )
@@ -63,8 +63,9 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="row text-center">
-          <div className="col-3">
+        <div className="row text-center bg-light">
+
+          <div className="col-3 bg">
             {isHome ? (
               <img style={{ maxHeight: "300px", maxWidth: "200px", border: "none" }}
                 className="card p-3 img-fluid mx-auto my-2"
@@ -78,8 +79,9 @@ export default function Header() {
             )}
           </div>
 
-          <div className="row px-3 w-50">
-            <div className="col-3 mt-5 text-black text-center">
+          <div className="row p-5 w-50 d-flex">
+          
+            <div className="col text-black text-start">
               {isForm ? (
                 ""
               ) : (
@@ -89,30 +91,29 @@ export default function Header() {
               )}
             </div>
 
-            <div className="col-6 text-black mt-5 text-center">
+            <div className="col-4 text-black text-center">
               {isForm ? (
                 ""
               ) : (
                 <Link to="/form?type=contact" style={{ textDecoration: 'none' }}>
                   <h6 style={{ color: "black" }}>{t("main.contact")}</h6>
                 </Link>
-              )}
-
+              )}             
 
             </div>
 
-            <div className="col my-auto">
+            <div className="col-4 d-flex justify-content-end">
               <h6><Languages /> </h6>
             </div>
 
           </div>
 
-          <div className="col-3 mt-4 teaming-container">
+          <div className="col-3 mt-4 teaming-container mx-auto">
             <div className="teaming-overlay"></div>
             <a href="https://www.teaming.net/veuanimal-santacolomadegramenet-bcn" target="_blank" rel="noopener noreferrer" className="teaming-text" style={{ textDecoration: 'none' }}>
               <h4 className="fs-6">{t("main.teaming")}</h4>
               <h5 className="fs-5 fw-bolder">{t("main.teaming2")}</h5>
-              <div className="row text-end teaming-text">
+              <div className="row teaming-text">
 
                 <h6 className="fs-6 col text-center ">{t("main.teaming3")}</h6>
               </div>
@@ -123,7 +124,7 @@ export default function Header() {
         </div>
 
         <div className="row d-flex text-center justify-content-center">   
-        <div className="col-6 fs-2 mt-3" style={{textDecoration:"none"}}>  
+        <div className="col-6 fs-2 mt-5" style={{textDecoration:"none"}}>  
           {isHome ? (
             <h1>{t("main.title")}</h1>
             ) : (

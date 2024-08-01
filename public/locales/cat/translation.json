@@ -1,21 +1,25 @@
-{    
-    "main": {
-      "title": "Adopcions a Barcelona",
-      "becomePartner": "Vols ser soci?",
-      "contact": "Contacta",
-      "team": "Uneix-te al nostre equip de voluntaris",
-      "teaming": "Fes-te",
-      "teaming2": "TEAMING",
-      "teaming3": "des d'1€ al mes",
-      "moreinfo": "Més info",
-       "vetinfo": "Fitxa Veterinària",
-       "vaccines": "Vacunes",
-       "deworming": "Desparasitació",
-       "age": "Edat aprox",
-       "characteristics": "Característiques",
-       "ompleform": "Omple el Formulari",     
-       "backlist": "Tornar al llistat",
-       "welcomevolunteer": "Benvingut a la pàgina de voluntaris de Veu Animal",
-       "thanks": "Gràcies per formar part del nostre equip!"
-    }
+{
+  "main": {
+    "title": "Adopcions a Barcelona",
+    "becomePartner": "Vols ser soci?",
+    "contact": "Contacta",
+    "team": "Uneix-te al nostre equip de voluntaris",
+    "teaming": "Fes-te",
+    "teaming2": "TEAMING",
+    "teaming3": "des d'1€ al mes",
+    "moreinfo": "Més info",
+    "vetinfo": "Fitxa Veterinària",
+    "vaccines": "Vacunes",
+    "deworming": "Desparasitació",
+    "age": "Edat aprox",
+    "characteristics": "Característiques",
+    "ompleform": "Omple el Formulari",
+    "backlist": "Tornar al llistat",
+    "welcomevolunteer": "Benvingut a la pàgina de voluntaris de Veu Animal",
+    "thanks": "Gràcies per formar part del nostre equip!",
+    "adopt_me": "Et decideixes a adoptar-me?",
+    "adopt_us": "Et decideixes a adoptar-nos?",
+    "foster_me": "O em pots brindar una llar d'acollida?",
+    "foster_us": "O ens pots brindar una llar d'acollida?"
   }
+}
