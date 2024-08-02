@@ -20,6 +20,22 @@
     "adopt_me": "¿Te decides a adoptarme?",
     "adopt_us": "¿Te decides a adoptarnos?",
     "foster_me": "¿O puedes brindarme un hogar de acogida?",
-    "foster_us": "¿O puedes brindarnos un hogar de acogida?"
+    "foster_us": "¿O puedes brindarnos un hogar de acogida?",
+    "aboutVeu": "Más sobre Veu Animal",
+    "form": "Formulario",
+    "comment" : "¿Algún comentario? (optional)",
+    "username" : "Nombre y apellidos",
+    "userphone" : "Teléfono",
+    "select" : "Seleccione",
+    "adopction": "Adopción",
+    "shelterhouse": "Quiero ser casa de acogida",
+    "bepartner": "Quiero ser socio",
+    "needcontact": "Necesito que me contacten",
+    "bevoluntier": "Quiero ser voluntario",
+    "animalname": "Nombre del animal (opcional)",
+    "selectanimal": "Seleccione el nombre del animal",
+    "submit": "Enviar",
+    "formsuccess": "Formulario enviado con éxito, pronto nos pondremos en contacto con usted."
+
   }
 }

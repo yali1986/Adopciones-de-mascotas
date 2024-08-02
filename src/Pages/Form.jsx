@@ -1,8 +1,11 @@
 import { useState, useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CatContext } from '../context/CatContext'
+import { useTranslation } from 'react-i18next'
 
 const Form = () => {
+
+  const {t} = useTranslation("translation")
   const { cats, selectedCat } = useContext(CatContext)
   const [message, setMessage] = useState({ text: "", className: "" })
   const [selectedCatId, setSelectedCatId] = useState("")
@@ -29,7 +32,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setMessage({ text: "Formulario enviado con éxito, pronto nos pondremos en contacto con usted.", className: "text-success" })
+    setMessage({ text: t("main.formsuccess"), className: "text-success" })
   }
 
   const handleSelectChange = (e) => {
@@ -40,42 +43,52 @@ const Form = () => {
     <div className='container-fluid'>
       <div className='row'>
         <div className="col-6 mx-auto">
-          <div className='card p-3 mt-5 shadow p-4 bg-body-tertiary' style={{ border: "none", maxHeight:"620px" }}>
-            <h1 className='card-title'>Formulario</h1>
-            <form onSubmit={handleSubmit} className='card-body'>
-              <input className='row mb-3' type="text" placeholder='Nombre y apellidos' id="nombre" required />
-              <input className='row mb-3' type="text" placeholder='DNI' id="dni" required />
-              <input className='row mb-3' type="number" placeholder='Teléfono' id="tlf" required />
+          <div className='card p-3 mt-5 shadow p-4 bg-body-tertiary ps-5' style={{ border: "none", maxHeight:"740px" }}>
+            <h1 className='card-title'>{t("main.form")}</h1>
 
-              <select className="form-select form-select-sm row w-50 mb-3" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} required>
-                <option value="0">Seleccione</option>
-                <option value="1">Adopción</option>
-                <option value="2">Casa de acogida</option>
-                <option value="3">Quiero ser socio</option>
-                <option value="4">Necesito que me contacten</option>
-                <option value="5">Quiero ser voluntario</option>
+            <form onSubmit={handleSubmit} className='card-body' action='../components/sendemail.php' method='post'>
+              <input className='row mb-3 w-75' type="text" name="name" placeholder={t("main.username")} id="name" required />
+              <input className='row mb-3 w-75' type="text" name="dni" placeholder='DNI/Passport' id="dni" required />
+              <input className='row mb-3 w-75' type="number" name="phone" placeholder={t("main.userphone")} id="phone" required />
+              <input className='row my-3 mb-4 w-75' type="email" name="email" placeholder='Email' id="email" required />
+
+              <select className="form-select form-select-sm row w-75 mb-3" name="subject" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} required>
+                <option value="0">{t("main.select")}</option>
+                <option value="1">{t("main.adopction")}</option>
+                <option value="2">{t("main.shelterhouse")}</option>
+                <option value="3">{t("main.bepartner")}</option>
+                <option value="4">{t("main.needcontact")}</option>
+                <option value="5">{t("main.bevoluntier")}</option>
               </select>
 
-              <p className='mt-3 mb-1 row'>Nombre del animal (opcional)</p>
-              <select className="form-select form-select-sm row w-50" value={selectedCatId} onChange={handleSelectChange}>
-                <option value="" disabled>Seleccione el nombre del animal</option>
+              <p className='mt-3 mb-1 row'>{t("main.animalname")}</p>
+              <select className="form-select form-select-sm row w-75" name="animal" value={selectedCatId} onChange={handleSelectChange}>
+                <option value="" disabled>{t("main.selectanimal")}</option>
                 {cats.map(cat => (
                   <option key={cat.id} value={cat.id}>{cat.name}</option>
                 ))}
-              </select>
+              </select>           
 
-              <input className='row my-3 mb-4' type="email" placeholder='Email' id="email" required />
-              <button className='btn btn-warning row mb-3 px-5' type='submit'>Enviar</button>
+
+              <p className='mt-3 mb-3 row'>{t("main.comment")}</p>
+              <textarea className='row my-3 mb-4 w-75' name="comment" id="comment" rows="4" />
+
+              <button className='btn btn-warning row mb-3 px-5' type='submit'>{t("main.submit")}</button>
             </form>
             {message.text && <p className={message.className}>{message.text}</p>}
-            <Link to="/">
-              <button className='btn btn-outline-warning ms-1'>Volver al listado</button>
+           
+          </div>
+
+          <div className='row mt-3 ms-3'>
+          <Link to="/">
+              <button className='btn btn-outline-warning my-3 ms-4'>{t("main.backlist")}</button>
             </Link>
           </div>
+
         </div>
       </div>
     </div>
   )
 }
 
-export default Form
+export default Form 

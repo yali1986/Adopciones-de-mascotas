@@ -20,6 +20,21 @@
     "adopt_me": "Et decideixes a adoptar-me?",
     "adopt_us": "Et decideixes a adoptar-nos?",
     "foster_me": "O em pots brindar una llar d'acollida?",
-    "foster_us": "O ens pots brindar una llar d'acollida?"
+    "foster_us": "O ens pots brindar una llar d'acollida?",
+    "aboutVeu": "Més sobre Veu Animal",
+    "form": "Formulari",
+    "comment" : "Algun comentari? (optional)",
+    "username" : "Nom i cognoms",
+    "userphone" : "Telèfon",
+    "select" : "Seleccioneu",
+    "adopction": "Adopció",
+    "shelterhouse": "Vull ser casa d'acollida",
+    "bepartner": "Vull ser soci",
+    "needcontact": "Necessito que em contactin",
+    "bevoluntier": "Vull ser voluntari",
+    "animalname": "Nom de l'animal (opcional)",
+    "selectanimal": "Seleccioneu el nom de l'animal",
+    "submit": "Enviar",
+    "formsuccess": "Formulari enviat amb èxit, aviat ens posarem en contacte amb vosaltres."
   }
 }

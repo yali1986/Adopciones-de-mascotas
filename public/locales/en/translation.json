@@ -20,6 +20,21 @@
     "adopt_me": "Do you decide to adopt me?",
     "adopt_us": "Do you decide to adopt us?",
     "foster_me": "Or can you provide me with a foster home?",
-    "foster_us": "Or can you provide us with a foster home?"
+    "foster_us": "Or can you provide us with a foster home?",
+    "aboutVeu": "More about Veu Animal",
+    "form": "Form",
+    "comment" : "Any comments? (optional)",
+    "username" : "First and last name",
+    "userphone" : "Phone",
+    "select" : "Select",  
+    "adopction": "Adopction",
+    "shelterhouse": "I want to be shelter house",
+    "bepartner": "I want to be a partner",
+    "needcontact": "I need to be contacted",
+    "bevoluntier": "I want to be a volunteer",
+    "animalname": "Animal name (optional)",
+    "selectanimal": "Select the animal name",
+    "submit": "Send",
+    "formsuccess": "Form sent successfully, we will contact you soon."
   }
 }
