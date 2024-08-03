@@ -2,6 +2,8 @@ import { useState, useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CatContext } from '../context/CatContext'
 import { useTranslation } from 'react-i18next'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Form = () => {
 
@@ -11,6 +13,24 @@ const Form = () => {
   const [selectedCatId, setSelectedCatId] = useState("")
   const [selectedOption, setSelectedOption] = useState("")
   const location = useLocation()
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_sl3j2jo', 'template_q9cmd8b', form.current, {
+        publicKey: 'KuHrCYqPkMNyMtV8m',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(location.search)
@@ -40,6 +60,24 @@ const Form = () => {
   }
 
   return (
+    <>
+<form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+
+      <label>Email</label>
+      <input type="email" name="user_email" />
+
+      <label>Phone</label>
+      <input type="phone" name="user_phone" />
+
+      <label>Message</label>
+      <textarea name="message" />
+      
+      <input type="submit" value="Send" />
+    </form>
+
+
     <div className='container-fluid'>
       <div className='row'>
         <div className="col-6 mx-auto">
@@ -88,6 +126,7 @@ const Form = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
