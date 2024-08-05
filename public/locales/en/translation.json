@@ -35,6 +35,21 @@
     "animalname": "Animal name (optional)",
     "selectanimal": "Select the animal name",
     "submit": "Send",
-    "formsuccess": "Form sent successfully, we will contact you soon."
+    "formsuccess": "Form sent successfully, we will contact you soon.",
+    "alertPIN": "Invalid PIN. You are not authorized to register.",
+    "attentionnotice": "If you have been approved as a volunteer, congratulations, and thank you for collaborating with animal protection. Please insert the pin provided to you:",
+    "attentionnoticelogin": "Attention: Only volunteers approved by the VEU ANIMAL team will be able to access it.",
+    "erroruser": "Error registering user",
+    "errorlogin": "Incorrect username or password",
+     "signup": "Sign up",
+    "volunteers": "Volunteers",
+    "loginok": "Do you already have an account? Login",
+    "signupok": "You do not have an account? Sign up",
+    "validatepin": "Validate PIN",
+    "invalidpin": "Invalid PIN. Please try again.",
+    "placeholderpin": "Enter authorization PIN",   
+    "placeholderemail": "Enter your email",   
+    "placeholderpassword": "Enter your password"
+  
   }
 }

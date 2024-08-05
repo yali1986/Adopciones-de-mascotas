@@ -35,6 +35,21 @@
     "animalname": "Nombre del animal (opcional)",
     "selectanimal": "Seleccione el nombre del animal",
     "submit": "Enviar",
-    "formsuccess": "Formulario enviado con éxito, pronto nos pondremos en contacto con usted."
+    "formsuccess": "Formulario enviado con éxito, pronto nos pondremos en contacto con usted.",
+    "alertPIN": "PIN no válido. No estás autorizado a registrarte.",
+    "attentionnotice": "Si has sido aprobado como voluntario, enhorabuena, y gracias por colaborar con la protección animal. Por favor, inserta el pin que se te ha proporcionado:",
+   "attentionnoticelogin": "Atención: Solo podrán acceder voluntarios aprobados por el equipo de VEU ANIMAL.",
+    "erroruser": "Error al registrar el usuario",
+    "errorlogin": "Nombre de usuario o contraseña incorrecta",
+    "signup": "Registrarse",
+    "volunteers": "Voluntarios",
+    "loginok": "Ya tienes una cuenta? Accede",
+    "signupok": "¿No tienes una cuenta? Regístrate",
+    "validatepin": "Validar PIN",
+    "invalidpin": "PIN no válido. Inténtalo de nuevo.",
+    "placeholderpin": "Introduce PIN de autorización",   
+    "placeholderemail": "Introduce tu email",   
+    "placeholderpassword": "Introduce tu contraseña"
+
   }
 }

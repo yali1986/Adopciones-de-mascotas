@@ -35,6 +35,20 @@
     "animalname": "Nom de l'animal (opcional)",
     "selectanimal": "Seleccioneu el nom de l'animal",
     "submit": "Enviar",
-    "formsuccess": "Formulari enviat amb èxit, aviat ens posarem en contacte amb vosaltres."
+    "formsuccess": "Formulari enviat amb èxit, aviat ens posarem en contacte amb vosaltres.",
+    "alertPIN": "PIN no vàlid. No teniu autorització per registrar-vos.",
+    "attentionnotice": "Si has estat aprovat com a voluntari, enhorabona, i gràcies per col·laborar amb la protecció animal. Si us plau, inseriu el pin que se us ha proporcionat:",
+    "attentionnoticelogin": "Atenció: Només hi podran accedir voluntaris aprovats per l'equip de VEU ANIMAL.",
+    "erroruser": "S'ha produït un error en registrar l'usuari",
+    "errorlogin": "Nom d'usuari o contrasenya incorrecta",
+     "signup": "Registra't",
+    "volunteers": "Voluntaris",
+    "loginok": "Ja tens un compte? iniciar Sessió",
+    "signupok": "No tens un compte? Registra't",
+    "validatepin": "Validar PIN",
+    "invalidpin": "PIN no vàlid. Siusplau torna-ho a provar.",
+    "placeholderpin": "Introdueix PIN d'autorització",   
+    "placeholderemail": "Introdueix el teu email",   
+    "placeholderpassword": "Introdueix la teva contrasenya"
   }
 }
