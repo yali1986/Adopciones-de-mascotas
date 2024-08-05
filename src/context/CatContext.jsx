@@ -1,8 +1,7 @@
-
 import { createContext, useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
 import { ref, getDownloadURL } from 'firebase/storage';
-import { db, storage } from '../credenciales'; // Asegúrate de que la ruta sea correcta
+import { db, storage } from '../credenciales'; 
 
 const CatContext = createContext();
 
@@ -33,8 +32,12 @@ const CatProvider = ({ children }) => {
     setSelectedCat(cat);
   };
 
+  const clearSelectedCat = () => {
+    setSelectedCat(null);
+  };
+
   return (
-    <CatContext.Provider value={{ cats, selectedCat, selectCat }}>
+    <CatContext.Provider value={{ cats, selectedCat, selectCat, clearSelectedCat }}>
       {children}
     </CatContext.Provider>
   );

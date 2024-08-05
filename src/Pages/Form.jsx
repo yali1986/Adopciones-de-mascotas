@@ -5,51 +5,67 @@ import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
 const Form = () => {
-  const { t } = useTranslation("translation")
-  const { cats, selectedCat } = useContext(CatContext)
-  const [message, setMessage] = useState({ text: "", className: "" })
-  const [selectedCatId, setSelectedCatId] = useState("")
-  const [selectedOption, setSelectedOption] = useState("")
-  const location = useLocation()
-  const form = useRef()
+  const { t } = useTranslation("translation");
+  const { cats, selectedCat, clearSelectedCat } = useContext(CatContext);
+  const [message, setMessage] = useState({ text: "", className: "" });
+  const [selectedCatName, setSelectedCatName] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+  const location = useLocation();
+  const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs
       .sendForm('service_sl3j2jo', 'template_q9cmd8b', form.current, 'KuHrCYqPkMNyMtV8m')
       .then(
         () => {
-          console.log('SUCCESS!')
-          setMessage({ text: t("main.formsuccess"), className: "text-success" })
+          console.log('SUCCESS!');
+          setMessage({ text: t("main.formsuccess"), className: "text-success" });
+          form.current.reset(); // Limpia los campos del formulario
+          setSelectedCatName("");
+          setSelectedOption("");
         },
         (error) => {
           console.log('FAILED...', error.text);
-          setMessage({ text: t("main.formerror"), className: "text-danger" })
+          setMessage({ text: t("main.formerror"), className: "text-danger" });
         }
       );
   };
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search)
-    const type = params.get('type')
-    if (type === 'partner') {
-      setSelectedOption("3")
-    } else if (type === 'contact') {
-      setSelectedOption("0")
-    } else if (type === 'voluntier') {
-      setSelectedOption("5")
-    }
-  }, [location]);
+    const params = new URLSearchParams(location.search);
+    const type = params.get('type');
 
-  useEffect(() => {
-    if (selectedCat) {
-      setSelectedCatId(selectedCat.id)
+    if (!type) {
+      if (selectedCat) {
+        setSelectedCatName(selectedCat.name);
+      } else {
+        setSelectedCatName("");
+      }
+      setSelectedOption("");
+    } else {
+      clearSelectedCat();
+      switch (type) {
+        case 'partner':
+          setSelectedOption(t("main.bepartner"));
+          break;
+        case 'voluntier':
+          setSelectedOption(t("main.bevoluntier"));
+          break;
+        default:
+          setSelectedOption("");
+          break;
+      }
     }
-  }, [selectedCat])
+  }, [location, t, selectedCat, clearSelectedCat]);
 
   const handleSelectChange = (e) => {
-    setSelectedCatId(e.target.value)
+    setSelectedCatName(e.target.value);
+  };
+
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
   };
 
   return (
@@ -65,8 +81,8 @@ const Form = () => {
               <input className='row mb-3 w-75' type="phone" name="user_phone" placeholder={t("main.userphone")} id="phone" required />
               <input className='row my-3 mb-4 w-75' type="email" name="user_email" placeholder='Email' id="email" required />
 
-              <select className="form-select form-select-sm row w-75 mb-3" name="subject" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} required>
-                <option value={t("main.select")}>{t("main.select")}</option>
+              <select className="form-select form-select-sm row w-75 mb-3" name="subject" value={selectedOption} onChange={handleOptionChange} required>
+                <option value="">{t("main.select")}</option>
                 <option value={t("main.adoption")}>{t("main.adoption")}</option>
                 <option value={t("main.shelterhouse")}>{t("main.shelterhouse")}</option>
                 <option value={t("main.bepartner")}>{t("main.bepartner")}</option>
@@ -75,8 +91,8 @@ const Form = () => {
               </select>
 
               <p className='mt-3 mb-1 row'>{t("main.animalname")}</p>
-              <select className="form-select form-select-sm row w-75" name="animal" value={selectedCatId} onChange={handleSelectChange}>
-                <option value="" disabled>{t("main.selectanimal")}</option>
+              <select className="form-select form-select-sm row w-75" name="animal" value={selectedCatName} onChange={handleSelectChange} required>
+                <option value="">{t("main.selectanimal")}</option>
                 {cats.map(cat => (
                   <option key={cat.id} value={cat.name}>{cat.name}</option>
                 ))}
@@ -99,7 +115,7 @@ const Form = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Form
+export default Form;
