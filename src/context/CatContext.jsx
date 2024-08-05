@@ -1,7 +1,10 @@
-import { createContext, useState } from 'react';
+
+import { createContext, useState, useEffect } from 'react';
+import { collection, addDoc } from "firebase/firestore";
+import { db } from '../credenciales'; 
 import img1 from "../assets/img1ok.jpg";
 import img2 from "../assets/img2ok.jpg";
-import img3 from "../assets/img3.jpg";
+import img3 from "../assets/img3ok.jpg";
 import img4 from "../assets/img4ok.jpg";
 import img5 from "../assets/img5ok.jpg";
 import img6 from "../assets/img6ok.jpg";
@@ -17,7 +20,7 @@ const CatProvider = ({ children }) => {
       story: "Rescued from the streets",
       image: img1,
       characteristics: "playful, energetic",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "sí"
@@ -29,19 +32,19 @@ const CatProvider = ({ children }) => {
       story: "Found in a park",
       image: img2,
       characteristics: "funny, observer",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "sí"
     },
     {
       id: 3,
-      name: "Bruno",
+      name: "Noel",
       age: "16 months",
       story: "Rescued from a building",
       image: img3,
       characteristics: "sleepyhead, tender, cat friendly, dog friendly",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "no, con compromiso de esterilización"
@@ -53,7 +56,7 @@ const CatProvider = ({ children }) => {
       story: "Found in a park",
       image: img4,
       characteristics: "quiet, affectionate",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "sí"
@@ -65,7 +68,7 @@ const CatProvider = ({ children }) => {
       story: "Rescued from the streets",
       image: img5,
       characteristics: "funny, curious",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "no, con compromiso de esterilización"
@@ -77,7 +80,7 @@ const CatProvider = ({ children }) => {
       story: "Found in a forest",
       image: img6, 
       characteristics: "quiet, sleepyhead",
-      microship: "sí",
+      microchip: "sí",
       vaccines: "no",
       dewormed: "sí",
       sterilized: "sí"
@@ -90,8 +93,16 @@ const CatProvider = ({ children }) => {
     setSelectedCat(cat);
   };
 
+  const uploadCats = async () => {
+    const catCollection = collection(db, "cats");
+    for (const cat of cats) {
+      await addDoc(catCollection, cat);
+    }
+    console.log("Cats uploaded successfully");
+  };
+
   return (
-    <CatContext.Provider value={{ cats, selectedCat, selectCat }}>
+    <CatContext.Provider value={{ cats, selectedCat, selectCat, uploadCats }}>
       {children}
     </CatContext.Provider>
   );

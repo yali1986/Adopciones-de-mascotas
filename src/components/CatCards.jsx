@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CatContext } from '../context/CatContext'
 import "./catCards.css"
@@ -6,8 +6,12 @@ import { useTranslation } from "react-i18next"
 
 const CatCards = () => {
   const { t } = useTranslation("translation")
-  const { cats, selectCat } = useContext(CatContext);
+  const { cats, selectCat, uploadCats } = useContext(CatContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    uploadCats();
+  }, []);
 
   const handleMoreInfoClick = (cat) => {
     selectCat(cat)
