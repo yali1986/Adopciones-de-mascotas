@@ -49,6 +49,8 @@
     "invalidpin": "PIN no vàlid. Siusplau torna-ho a provar.",
     "placeholderpin": "Introdueix PIN d'autorització",   
     "placeholderemail": "Introdueix el teu email",   
-    "placeholderpassword": "Introdueix la teva contrasenya"
+    "placeholderpassword": "Introdueix la teva contrasenya",
+    "verificationSent": "T'hem enviat un correu electrònic de verificació. Accedeix al teu email i verifica el teu compte per continuar",
+    "verifyEmail": "Accedeix al teu email i verifica el teu email per continuar. Si no has rebut email de verificació, prova a escriure correctament el teu correu en registrar-te."
   }
 }

@@ -49,7 +49,9 @@
     "invalidpin": "PIN no válido. Inténtalo de nuevo.",
     "placeholderpin": "Introduce PIN de autorización",   
     "placeholderemail": "Introduce tu email",   
-    "placeholderpassword": "Introduce tu contraseña"
+    "placeholderpassword": "Introduce tu contraseña",
+    "verificationSent": "Te hemos enviado un email de verificación. Accede a tu email y verifica tu cuenta para continuar",
+    "verifyEmail": "Accede a tu email y verifica tu email para continuar. Si no has recibido email de verificación, prueba a escribir correctamente tu correo al registrarte "
 
   }
 }
